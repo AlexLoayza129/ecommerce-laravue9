@@ -7,7 +7,9 @@ use Inertia\Inertia;
 
 class HomeController extends Controller
 {
+
     public function index(){
-        Inertia::render('HomeComponent');
+        return inertia('HomeComponent');
     }
+
 }

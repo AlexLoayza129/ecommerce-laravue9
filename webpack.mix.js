@@ -8,13 +8,5 @@ mix.alias({
 
 // Build files
 mix.js("resources/js/app.js", "public/js")
-    .vue({ version: 3 })
-    .webpackConfig({
-        resolve: {
-            alias: {
-                "@": path.resolve(__dirname, "resources/js"),
-            },
-        },
-    })
-    .extract()
-    .version();
+    .vue()
+    .postCss('resources/css/app.css', 'public/css');
